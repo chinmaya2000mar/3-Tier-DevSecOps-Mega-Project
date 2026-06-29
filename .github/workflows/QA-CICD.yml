@@ -1,0 +1,22 @@
+name: Devops CICI PIPELINE
+
+on:
+   push: 
+   branches:
+     - qa
+   path:
+     - client/**
+     - server/**
+     - .github/workflows/QA-CICD.yml
+     
+
+jobs:
+  gitleaks-scan:
+   name: Gitleaks-scan
+   runs-on: ubuntu-latest
+   steps:
+      - name: Checkout Source Code
+      - uses: actions/checkout@v4
+      - name: Run Gitleaks scan
+      
+    
