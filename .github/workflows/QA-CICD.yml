@@ -2,9 +2,9 @@ name: Devops CICI PIPELINE
 
 on:
    push: 
-   branches:
+    branches:
      - qa
-   path:
+   paths:
      - client/**
      - server/**
      - .github/workflows/QA-CICD.yml
